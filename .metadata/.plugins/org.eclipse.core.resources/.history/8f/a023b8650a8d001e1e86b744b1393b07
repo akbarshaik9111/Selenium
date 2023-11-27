@@ -1,0 +1,14 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class _3_Locators {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+		
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys("akbar");
+	}
+
+}

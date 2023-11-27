@@ -1,0 +1,25 @@
+
+USING ID
+driver.findElement(By.id("inputUsername")).sendKeys("akbar");
+
+USING NAME
+driver.findElement(By.name("inputPassword")).sendKeys("Akbar@0326");
+
+USING CLASS
+driver.findElement(By.className("signInBtn")).click();
+
+DIFFERENT WAYS TO USE CSS SELECTOR
+#1. W.R.T CLASS NAME
+	tagname.classname
+
+#2. W.R.T ID
+	tagname#id
+	
+#3. GENERIC WAY
+	tagName[attribute = '']
+	
+How to verify whether we are able to identify current element or not?
+Steps:
+	i. Open the console
+	ii. provide syntax as $('place the identified element for css selector')
+	iii. provide syntax as $x('place the identified element for css selector')
