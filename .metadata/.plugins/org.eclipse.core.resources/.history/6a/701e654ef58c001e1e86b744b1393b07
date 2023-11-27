@@ -5,7 +5,7 @@ public class Driver {
 	public static void main(String[] args) {
 		
 		//PROVIDED THE LOCATION OF EDGE DRIVER
-		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", "E:\\Selenium\\msedgedriver.exe");
 		
 		/*
 		 * EdgeDriver() --> IT HELPS YOU TO EXECUTE SELENIUM SCRIPTS ON EDGE BROWSER.
@@ -13,31 +13,32 @@ public class Driver {
 		WebDriver driver = new EdgeDriver();
 		
 		/*
-		 * 1. get() - THIS METHOD WILL LAUNCH A NEW BROWSER AND OPENS THE GIVEN URL IN THE BROWSER INSTANCE.
+		 * 1. get() - This method will launch a new browser and opens the given URL in the browser instance.
 		 */
 		driver.get("https://rahulshettyacademy.com/");
 		
 		/*
-		 * 2. getTitle() - THIS METHOD IS USED TO RETRIEVE THE TITLE OF THE WEB PAGE THE USER CURRENTLY WORKING ON.
+		 * 2. getTitle() - This method is used to retrieve the title of the web page the user currently working on.
 		 */
 		String title = driver.getTitle();
 		System.out.println(title);
 		
 		/*
-		 * 3. getCurrentUrl() - GET CURRENT URL FROM BROWSER
+		 * getCurrentUrl() - GET CURRENT URL FROM BROWSER
 		 */
 		String url = driver.getCurrentUrl();
 		System.out.println(url);
 		
+		
+		
+		
+		
+		//WebDriver driver = new ChromeDriver();
 		/*
-		 * 4. close() - THIS COMMAND IS USED TO CLOSE THE CURRENT BROWSER WINDOW WHICH IS CURRENTLY IN FOCUS.
-		 */
 		driver.close();
-		
-		
-		/*
 		//driver.findElement(null);
 		//driver.findElements(null)
+		driver.getCurrentUrl();
 		driver.getPageSource();
 		driver.getWindowHandle();
 		driver.getWindowHandles();

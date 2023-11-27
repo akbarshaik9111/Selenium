@@ -34,7 +34,6 @@ public class Driver {
 		 */
 		driver.close();
 		
-		
 		/*
 		//driver.findElement(null);
 		//driver.findElements(null)

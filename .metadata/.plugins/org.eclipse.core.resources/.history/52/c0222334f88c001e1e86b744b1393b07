@@ -5,7 +5,7 @@ public class Driver {
 	public static void main(String[] args) {
 		
 		//PROVIDED THE LOCATION OF EDGE DRIVER
-		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", "E:\\Selenium\\msedgedriver.exe");
 		
 		/*
 		 * EdgeDriver() --> IT HELPS YOU TO EXECUTE SELENIUM SCRIPTS ON EDGE BROWSER.
@@ -32,10 +32,10 @@ public class Driver {
 		/*
 		 * 4. close() - THIS COMMAND IS USED TO CLOSE THE CURRENT BROWSER WINDOW WHICH IS CURRENTLY IN FOCUS.
 		 */
-		driver.close();
-		
+		//driver.close();
 		
 		/*
+		driver.close();
 		//driver.findElement(null);
 		//driver.findElements(null)
 		driver.getPageSource();
