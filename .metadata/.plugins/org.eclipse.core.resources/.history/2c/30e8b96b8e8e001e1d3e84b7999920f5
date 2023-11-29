@@ -1,0 +1,17 @@
+package _1_introduction;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class _3_navigations {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+		
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+
+}
