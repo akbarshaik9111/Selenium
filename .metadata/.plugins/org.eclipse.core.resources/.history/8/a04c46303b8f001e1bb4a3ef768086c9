@@ -1,0 +1,17 @@
+package _3_web_components;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class _1_E2E_Functionality {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+		
+		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+
+}

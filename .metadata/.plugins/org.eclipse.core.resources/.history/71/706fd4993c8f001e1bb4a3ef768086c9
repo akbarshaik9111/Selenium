@@ -1,0 +1,34 @@
+package _3_web_components;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class _1_E2E_Functionality {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+
+		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+		driver.findElement(By.id("autosuggest")).sendKeys("ind");
+
+		List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+
+		for (WebElement option : options) {
+			if (option.getText().equalsIgnoreCase("india")) {
+				option.click();
+				break;
+			}
+		}
+		
+		driver.findElement(By.xpath("//span[contains(@id, 'mainContent_ddl_originStation1_CTXT')]")).click();
+		driver.findElement(By.xpath("//a[@value='GOI']")).click();
+	}
+
+}
