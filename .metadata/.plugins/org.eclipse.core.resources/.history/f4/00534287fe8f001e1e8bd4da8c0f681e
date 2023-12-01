@@ -1,0 +1,44 @@
+package _4_deep_dive;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class _1_AddItemsToCart {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+
+		int count = 0;
+
+		String[] items = { "Beans", "Cauliflower", "Apple", "Pears", "Musk Melon" };
+
+		List<WebElement> pro_items = driver.findElements(By.xpath("//button[text() = 'ADD TO CART']"));
+
+		for (int i = 0; i < pro_items.size(); i++) {
+			String prod_name = driver.findElements(By.cssSelector("h4.product-name")).get(i).getText().split("-")[0]
+					.trim();
+
+			List<String> products = Arrays.asList(items);
+			if (products.contains(prod_name)) {
+				pro_items.get(i).click();
+				count++;
+
+				if (count == items.length) {
+					break;
+				}
+			}
+
+		}
+	}
+
+}
