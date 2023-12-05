@@ -39,6 +39,6 @@ public class _1_AddItemsToCart {
 			}
 
 		}
+		driver.close();
 	}
-
 }

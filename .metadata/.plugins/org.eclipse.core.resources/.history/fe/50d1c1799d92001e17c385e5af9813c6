@@ -1,0 +1,8 @@
+package _5_synchronization;
+
+public class _2_FluentWait {
+	public static void main(String[] args) {
+		
+	}
+
+}

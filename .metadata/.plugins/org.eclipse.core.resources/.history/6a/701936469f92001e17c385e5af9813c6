@@ -1,0 +1,28 @@
+package _5_synchronization;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+public class _2_FluentWait {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "E:\\Testing\\Selenium\\msedgedriver.exe");
+		WebDriver driver = new EdgeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		
+		driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+		
+		WebElement start = driver.findElement(By.cssSelector("div[id='start'] button"));
+		
+		Wait<WebDriver> wait = new FluentWait<>(driver);
+		
+	}
+
+}

@@ -43,7 +43,7 @@ public class _1_Locators {
 		driver.close();
 	}
 	
-	public static String getPassword(WebDriver driver) {
+	private static String getPassword(WebDriver driver) {
 		String pwdMsg = driver.findElement(By.xpath("//p[@class= 'infoMsg']")).getText();
 		String password = pwdMsg.split("'")[1].split("'")[0];
 		return password;

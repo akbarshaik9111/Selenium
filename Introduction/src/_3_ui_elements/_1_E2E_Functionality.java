@@ -98,5 +98,6 @@ public class _1_E2E_Functionality {
 		Assert.assertEquals(dropdown.getFirstSelectedOption().getText(), "INR");
 		
 		driver.findElement(By.xpath("//input[@id='ctl00_mainContent_btn_FindFlights']")).click();
+		driver.close();
 	}
 }
