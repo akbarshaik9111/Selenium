@@ -23,11 +23,6 @@ public class _2_FluentWait {
 		
 		driver.findElement(By.cssSelector("div[id='start'] button")).click();
 		
-		/*
-		 * YOU CAN SEE MORE DETAILS - https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/FluentWait.html
-		 */
-		
-		// WAIT FOR PARTICULAR ELEMENT IS DISPLAYING USING EXPLICIT WAIT (FLUENT WAIT MECHANISM)
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 			       .withTimeout(30, TimeUnit.SECONDS)
 			       .pollingEvery(3,	TimeUnit.SECONDS)

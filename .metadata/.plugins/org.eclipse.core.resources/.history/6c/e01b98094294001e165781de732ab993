@@ -37,9 +37,8 @@ public class _1_AddItemsToCart {
 					break;
 				}
 			}
+
 		}
-		
-		// CLOSE THE BROWSER WINDOW
 		driver.close();
 	}
 }

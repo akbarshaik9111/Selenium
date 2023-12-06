@@ -20,8 +20,6 @@ public class _1_MouseHover {
 		
 		WebElement signIn = driver.findElement(By.cssSelector("#nav-link-accountList"));
 		WebElement search = driver.findElement(By.cssSelector("#twotabsearchtextbox"));
-		
-		//CREATE THE OBJECT FOR ACTIONS CLASS
 		Actions action = new Actions(driver);
 		
 		//ENTER TEXT IN UPPER-CASE FORMAT AND SELECT THE ENTERED TEXT

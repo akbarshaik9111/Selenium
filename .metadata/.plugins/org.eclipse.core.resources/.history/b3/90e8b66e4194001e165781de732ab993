@@ -18,19 +18,13 @@ public class _2_Handling_Windows {
 		driver.manage().window().maximize();
 		
 		driver.findElement(By.cssSelector("a[class='blinkingText']")).click();
-		
-		//GET THE WINDOWS OPENED BY SELENIUM WEB DRIVER
 		Set<String> windows = driver.getWindowHandles();
-		
-		//ITERATE EACH AND EVERY WINDOW AND GET THE WINDOW IDS
 		Iterator<String> it = windows.iterator();
 		String parentId = it.next();
 		String childId = it.next();
 		
-		//SWITCH THE PARTICULAR WINDOW USING THE WINDOW ID
 		driver.switchTo().window(childId);
 		String password = driver.findElement(By.cssSelector("p[class='im-para red']")).getText().split("at")[1].trim().split(" ")[0];
-		
 		driver.switchTo().window(parentId);
 		driver.findElement(By.cssSelector("#username")).sendKeys(password);
 	}

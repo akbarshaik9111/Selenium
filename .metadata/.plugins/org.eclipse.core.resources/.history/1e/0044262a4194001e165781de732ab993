@@ -20,17 +20,17 @@ public class _1_LimitingWebDriver {
 		driver.manage().window().maximize();
 		
 		
-		//FIND THE TOTAL LINKS PRESENT IN THE WEB PAGE
+		//Find the total links present in the web page
 		int total_links = driver.findElements(By.tagName("a")).size();
 		System.out.println("TOTAL LINKS PRESENT IN THE WEB PAGE : "+total_links);
 		
 		
-		//LIMITING THE DRIVER AND FIND OUT THE TOTAL LINKS PRESENT IN FOOTER SECTION
+		//Limiting the driver and find out the total links present in footer section
 		WebElement footerSection = driver.findElement(By.xpath("//div[@id='gf-BIG']"));
 		total_links = footerSection.findElements(By.tagName("a")).size();
 		System.out.println("TOTAL LINKS PRESENT IN THE FOOTER SECTION : "+total_links);
 		
-		// LIMITING THE DRIVER AND FIND OUT THE TOTAL LINKS PRESENT IN FOOTER SECTION COLUMN
+		// Limiting the driver and find out the total links present in footer section column
 		WebElement firstFooterColumn = footerSection.findElement(By.xpath("//table/tbody/tr/td/ul[1]"));
 		total_links = firstFooterColumn.findElements(By.tagName("a")).size();
 		System.out.println("TOTAL LINKS PRESENT IN THE FOOTER SECTION FIRST COLUMN: "+total_links);
@@ -40,7 +40,7 @@ public class _1_LimitingWebDriver {
 			firstFooterColumn.findElements(By.tagName("a")).get(i).sendKeys(clickLinks);
 		}
 		
-		//ITERATE EACH AND EVERY WINDOW AND GET THE TITLE
+		//Iterate each and every window and get the title
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
 		
