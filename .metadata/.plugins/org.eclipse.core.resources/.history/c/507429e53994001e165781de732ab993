@@ -1,14 +1,12 @@
 package _7_realtimeexcersises_scope;
 
-import java.util.Iterator;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class _1_LimitingWebDriver {
 	public static void main(String[] args) {
@@ -31,16 +29,7 @@ public class _1_LimitingWebDriver {
 		System.out.println("TOTAL LINKS PRESENT IN THE FOOTER SECTION FIRST COLUMN: "+total_links);
 		
 		for(int i = 1; i < firstFooterColumn.findElements(By.tagName("a")).size(); i++) {
-			String clickLinks = Keys.chord(Keys.CONTROL, Keys.ENTER);
-			firstFooterColumn.findElements(By.tagName("a")).get(i).sendKeys(clickLinks);
-		}
-		
-		Set<String> windows = driver.getWindowHandles();
-		Iterator<String> it = windows.iterator();
-		
-		while(it.hasNext()) {
-			driver.switchTo().window(it.next());
-			System.out.println(driver.getTitle());
+			
 		}
 		
 	}
